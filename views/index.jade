@@ -1,9 +1,17 @@
 extends layout
 
 block content
-  .home
-    h1= title
-    p Know What You Sign
+  .call-to-action
+    a.hero(href='https://chrome.google.com/webstore/detail/gppgfopgkkiingembkklfojffngjephn', target='_blank')
 
-    a(href='https://chrome.google.com/webstore/detail/gppgfopgkkiingembkklfojffngjephn', target='_blank')
-      .cta Download The Chrome Extension
+      .cta-text
+        h2 Contract Reader
+        h1 Know What You Sign Online
+
+      .chrome
+        img(src='/images/chrome.png')
+        h2 (click me)
+
+block footer
+  p.footer
+    &copy; Instrumental Tech

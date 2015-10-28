@@ -1,23 +1,40 @@
-body {
+html, body {
   font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url("/images/background.png"); }
+  background: url("/images/background-full.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
-.home {
-  text-align: center;
-  padding: 1rem;
-  margin: 0 auto; }
-  .home a {
+.call-to-action {
+  color: white; }
+  .call-to-action .hero {
+    color: white;
     text-decoration: none;
-    color: black; }
-  .home .cta {
-    margin-top: 5rem;
-    padding: 3rem;
-    -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.31);
-    -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.31);
-    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.31);
-    font-size: 2rem; }
-  @media (min-width: 768px) {
-    .home {
-      width: 50%; } }
+    text-align: center; }
+    .call-to-action .hero h1 {
+      font-size: 3rem;
+      padding: 1rem; }
+      @media (min-width: 768px) {
+        .call-to-action .hero h1 {
+          position: absolute;
+          left: 3rem;
+          bottom: 10rem;
+          display: inline-block; } }
+    .call-to-action .hero .chrome {
+      margin-top: 16rem; }
+      @media (min-width: 768px) {
+        .call-to-action .hero .chrome {
+          position: absolute;
+          right: 3rem;
+          bottom: 5rem; } }
+      .call-to-action .hero .chrome img {
+        width: 8rem; }
+
+.footer {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 1rem; }
 
 /*# sourceMappingURL=style.css.map */
