@@ -13,26 +13,24 @@ html, body {
     color: white;
     text-decoration: none;
     text-align: center; }
-    .call-to-action .hero h2 {
-      padding: 1rem;
-      background-color: white;
-      color: #C31C1C;
-      margin-top: 0;
-      font-size: 1.75rem;
-      text-transform: uppercase; }
-    .call-to-action .hero h1 {
-      text-shadow: 0px 0px 8px rgba(12, 12, 11, 0.5);
-      font-size: 3rem;
-      padding: 1rem; }
-      @media (min-width: 890px) {
-        .call-to-action .hero h1 {
+    .call-to-action .hero .cta-text {
+      text-shadow: 0px 0px 8px rgba(12, 12, 11, 0.5); }
+      .call-to-action .hero .cta-text h2 {
+        text-transform: uppercase;
+        padding: 0 1rem; }
+      .call-to-action .hero .cta-text h1 {
+        font-size: 3rem;
+        padding: 0 1rem; }
+      @media (min-width: 768px) {
+        .call-to-action .hero .cta-text {
+          text-align: left;
           position: absolute;
-          left: 3rem;
+          left: 10rem;
           bottom: 10rem;
           display: inline-block; } }
     .call-to-action .hero .chrome {
       margin-top: 5rem; }
-      @media (min-width: 890px) {
+      @media (min-width: 768px) {
         .call-to-action .hero .chrome {
           position: absolute;
           right: 3rem;
@@ -44,7 +42,7 @@ html, body {
   color: white;
   text-align: center;
   margin-top: 3rem; }
-  @media (min-width: 890px) {
+  @media (min-width: 768px) {
     .footer {
       position: absolute;
       bottom: 0;
