@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  .new-submission
+    form(action='/submission', method='post')
+      .new-link
+        fieldset
+          label(for='contract_link') Link to Contract
+          input(id='contract_link', type='text', value='', placeholder='Paste a link to your contract here', name='contract_link')
+      .submit-link
+        input(type='submit',value='Read Contract',data-transition='fade')
+
+block footer
+  p.footer
+    &copy; Instrumental Tech
