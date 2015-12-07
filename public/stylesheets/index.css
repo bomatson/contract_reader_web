@@ -42,4 +42,17 @@ html, body {
       bottom: 0;
       right: 1rem; } }
 
-/*# sourceMappingURL=style.css.map */
+.new-submission {
+  text-align: center;
+  margin-top: 3rem; }
+  .new-submission .new-link {
+    margin-bottom: 1rem; }
+  .new-submission .line {
+    border-bottom: 1px solid;
+    height: 1rem; }
+    .new-submission .line.left {
+      border-right: 1px solid; }
+    .new-submission .line.right {
+      border-left: 1px solid; }
+
+/*# sourceMappingURL=index.css.map */
