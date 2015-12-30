@@ -45,16 +45,26 @@ html, body {
 .new-submission {
   text-align: center;
   margin-top: 3rem; }
-  .new-submission fieldset {
-    margin: 1rem auto; }
-    .new-submission fieldset input {
+  .new-submission .subheading {
+    padding: 0 1rem 2rem; }
+  .new-submission .new-linkage {
+    text-align: center;
+    line-height: 2.3em;
+    height: 2.3em;
+    margin: 10px 0 4rem;
+    height: 0.3rem;
+    margin-bottom: 1rem; }
+    .new-submission .new-linkage fieldset input {
       border: none;
-      font-size: 3rem;
-      width: 100%;
+      font-size: 5rem;
       padding: 0 5rem;
-      outline: none;
-      background-color: initial; }
+      outline: none; }
   .new-submission .new-link {
     margin-bottom: 1rem; }
-
-/*# sourceMappingURL=index.css.map */
+  .new-submission .line {
+    border-bottom: 1px solid;
+    height: 1rem; }
+    .new-submission .line.left {
+      border-right: 1px solid; }
+    .new-submission .line.right {
+      border-left: 1px solid; }
