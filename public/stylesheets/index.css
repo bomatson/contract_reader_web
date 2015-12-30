@@ -45,6 +45,36 @@ html, body {
 .new-submission {
   text-align: center;
   margin-top: 3rem; }
+  .new-submission .new-linkage {
+    text-align: center;
+    border-bottom: 1px solid black;
+    line-height: 2.3em;
+    height: 2.3em;
+    margin: 10px 0 4rem;
+    border-top: 2px solid black;
+    position: relative;
+    height: 0.3rem;
+    color: black; }
+    .new-submission .new-linkage fieldset {
+      position: absolute;
+      top: -1rem; }
+      .new-submission .new-linkage fieldset input {
+        border: none;
+        padding: 0 5rem;
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+        height: 4rem;
+        outline: none;
+        background-color: #f7f2e8; }
+        .new-submission .new-linkage fieldset input::-webkit-input-placeholder {
+          color: black; }
+        .new-submission .new-linkage fieldset input:-moz-placeholder {
+          color: black; }
+        .new-submission .new-linkage fieldset input::-moz-placeholder {
+          color: black;
+          opacity: 1; }
+        .new-submission .new-linkage fieldset input:-ms-input-placeholder {
+          color: black; }
   .new-submission .new-link {
     margin-bottom: 1rem; }
   .new-submission .line {

@@ -12,11 +12,13 @@ router.get('/submission', function(req, res, next) {
 
 router.post('/submission', function(req, res, next) {
   var link = req.body.contract_link;
-  request.post({url:'https://contract-reader.herokuapp.com/summarize', link: link}, function (error, resp, body) {
-    if (!error && resp.statusCode == 200) {
-      res.render('submission/show', { text: resp.text });
-    }
-  });
+  res.render('submission/show', { text: 'testing' });
+  // request.post({url:'https://contract-reader.herokuapp.com/summarize', link: link}, function (error, resp, body) {
+  //   console.log(error)
+  //   if (!error && resp.statusCode == 200) {
+  //     res.render('submission/show', { text: resp.text });
+  //   }
+  // });
 });
 
 
