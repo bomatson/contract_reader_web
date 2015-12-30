@@ -17,9 +17,10 @@ class App extends React.Component {
       json: true,
       body
     };
-    got('http://localhost:3000/contracts', options, null)
-      .then((res) => {
-        console.log(res.body);
+    got('http://contract-reader.herokuapp.com/contracts', options, null)
+      .then((resp) => {
+        if(resp.body)
+          this.setState({contract: resp.body});
       })
       .catch((err) => {
         console.log(err);

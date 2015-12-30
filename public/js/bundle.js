@@ -19709,8 +19709,8 @@
 	        json: true,
 	        body: body
 	      };
-	      (0, _got2.default)('http://localhost:3000/contracts', options, null).then(function (res) {
-	        console.log(res.body);
+	      (0, _got2.default)('http://contract-reader.herokuapp.com/contracts', options, null).then(function (resp) {
+	        if (resp.body) _this.setState({ contract: resp.body });
 	      }).catch(function (err) {
 	        console.log(err);
 	      });
@@ -19799,18 +19799,39 @@
 	  }
 
 	  _createClass(Contract, [{
+	    key: 'sentences',
+	    value: function sentences() {
+	      if (!!this.props.contract.summary) {
+	        var _sentences = this.props.contract.summary.split('.');
+
+	        return _sentences.map(function (sent, index) {
+	          var num = index + 1 + '. ';
+	          if (sent.length > 0) {
+	            return _react2.default.createElement(
+	              'div',
+	              { className: 'sentence' },
+	              _react2.default.createElement(
+	                'strong',
+	                null,
+	                num
+	              ),
+	              sent
+	            );
+	          }
+	        });
+	      }
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
-	      console.log(this.props);
-	      if (this.props.contract) {
-	        return _react2.default.createElement(
-	          'div',
-	          null,
-	          ' Hi '
-	        );
-	      } else {
-	        return null;
-	      }
+	      var contract = this.props.contract;
+	      var sentences = contract ? this.sentences() : null;
+
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        sentences
+	      );
 	    }
 	  }]);
 

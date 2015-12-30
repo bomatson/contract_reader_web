@@ -56,5 +56,7 @@ html, body {
       background-color: initial; }
   .new-submission .new-link {
     margin-bottom: 1rem; }
+  .new-submission .sentence {
+    margin: 1rem 3rem 0; }
 
 /*# sourceMappingURL=index.css.map */
