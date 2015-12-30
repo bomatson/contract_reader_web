@@ -42,4 +42,21 @@ html, body {
       bottom: 0;
       right: 1rem; } }
 
-/*# sourceMappingURL=style.css.map */
+.new-submission {
+  text-align: center;
+  margin-top: 3rem; }
+  .new-submission fieldset {
+    margin: 1rem auto; }
+    .new-submission fieldset input {
+      border: none;
+      font-size: 3rem;
+      width: 100%;
+      padding: 0 5rem;
+      outline: none;
+      background-color: initial; }
+  .new-submission .new-link {
+    margin-bottom: 1rem; }
+  .new-submission .sentence {
+    margin: 1rem 3rem 0; }
+
+/*# sourceMappingURL=index.css.map */
