@@ -19731,7 +19731,7 @@
 	        _react2.default.createElement(
 	          'p',
 	          { className: 'subheading' },
-	          'Paste a link of your contract to see a summary of its contents'
+	          'Paste a link to your contract and see a summary of its contents'
 	        ),
 	        _react2.default.createElement(
 	          'fieldset',

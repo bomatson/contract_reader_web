@@ -31,7 +31,7 @@ class App extends React.Component {
     return (
       <div className='new-submission'>
         <h1 className='heading'>Summarize</h1>
-        <p className='subheading'>Paste a link of your contract to see a summary of its contents</p>
+        <p className='subheading'>Paste a link to your contract and see a summary of its contents</p>
         <fieldset>
           <input
             type='text'
