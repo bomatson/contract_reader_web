@@ -19724,7 +19724,7 @@
 	        'div',
 	        { className: 'new-submission' },
 	        _react2.default.createElement(
-	          'h3',
+	          'h1',
 	          { className: 'heading' },
 	          'Summarize'
 	        ),
