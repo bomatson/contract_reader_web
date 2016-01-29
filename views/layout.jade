@@ -20,6 +20,11 @@ html
     meta(name="msapplication-TileColor", content="#da532c")
     meta(name="theme-color", content="#ffffff")
   body
+    nav.main-nav
+     a.pull-left(href='/faq') FAQ
+     a.pull-right(href='/about') About
+
     block content
-    block footer
+    .footer
+      p &copy; Instrumental Tech
     script(src='/js/bundle.js')

@@ -6,7 +6,6 @@ var gulp = require('gulp'),
   sass = require('gulp-sass');
 
 gulp.task('sass', function () {
-  console.log(arguments)
   gulp.src('./public/stylesheets/*.sass')
     .pipe(plumber())
     .pipe(sass())

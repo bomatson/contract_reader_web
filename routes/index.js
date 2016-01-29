@@ -3,7 +3,15 @@ var router = express.Router();
 var request = require('request');
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Contract Reader' });
+  res.render('index', { title: 'Nutshell' });
+});
+
+router.get('/faq', function(req, res, next) {
+  res.render('faq', { title: 'Nutshell' });
+});
+
+router.get('/about', function(req, res, next) {
+  res.render('about', { title: 'Nutshell' });
 });
 
 router.get('/submission', function(req, res, next) {

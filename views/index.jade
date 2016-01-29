@@ -1,17 +1,26 @@
 extends layout
 
 block content
-  .call-to-action
-    a.hero(href='https://chrome.google.com/webstore/detail/gppgfopgkkiingembkklfojffngjephn', target='_blank')
-
-      .cta-text
-        h1 Contract Reader
-        h2 Know What You Sign Online
-
-      .chrome
-        img(src='/images/chrome.png')
-        h3 (plz click me)
+  .container
+    .row
+      .col-xs-12.text-center
+        h1 Nutshell
+        h4 Summarize a contract in seconds
+        button.btn.btn-lg Try it free
+    .row.text-center
+      .col-xs-12
+        h2 How It Works
+      .col-xs-12.col-sm-6
+        h4 1. Forward us an email with your contract attached
+      .col-xs-12.col-sm-6
+        h4 2. Receive a bulleted summary of the contract within minutes
+      .col-xs-12
+        button.btn.btn-lg Learn more
+    .row
+      .col-xs-12.text-center
+        h2 Pricing
+        h4 The first contract is on us. $20 per email after that!
 
 block footer
-  p.footer
-    &copy; Instrumental Tech
+  .footer
+    p &copy; Instrumental Tech

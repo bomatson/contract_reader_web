@@ -1,52 +1,23 @@
 html, body
   font-size: 16px
   font-family: 'Open Sans', sans-serif
-  background-color: #f7f2e8
-  // background: url('/images/background-full.jpeg') no-repeat center center fixed
-  // -webkit-background-size: cover
-  // -moz-background-size: cover
-  // -o-background-size: cover
-  // background-size: cover
+  background-color: $background-color
+  color: white
 
-.call-to-action
-  color: black
+.main-nav
+  padding: 1rem
 
-  .hero
-    color: black
-    text-decoration: none
-    text-align: center
+  a
+    color: white
+    cursor: pointer
 
-    .cta-text
-      h2
-        text-transform: uppercase
-        padding: 0 1rem
-      h1
-        font-size: 3rem
-        padding: 0 1rem
-
-      @media(min-width: 768px)
-        text-align: left
-        position: absolute
-        left: 10rem
-        bottom: 10rem
-        display: inline-block
-
-    .chrome
-      margin-top: 5rem
-      @media(min-width: 768px)
-        position: absolute
-        right: 3rem
-        bottom: 5rem
-
-      img
-        width: 8rem
+    &:hover, &:focus
+      text-decoration: none
 
 .footer
-  color: black
-  text-align: center
+  color: white
   margin-top: 3rem
-
-  @media(min-width: 768px)
-    position: absolute
-    bottom: 0
-    right: 1rem
+  position: absolute
+  bottom: 0
+  text-align: center
+  width: 100%
