@@ -8,10 +8,14 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel', // 'babel-loader' is also a legal name to reference
+        loader: 'babel',
         query: {
           presets: ['es2015', 'stage-0', 'react']
         }
+      },
+      {
+        test: /bootstrap\/.+\.(jsx|js)$/,
+        loader: 'imports?jQuery=jquery,$=jquery,this=>window'
       }
     ]
   }

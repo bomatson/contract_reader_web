@@ -4,7 +4,7 @@ html
     title= title
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css')
-    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css" crossorigin="anonymous")
     link(rel='stylesheet', href='/stylesheets/index.css')
     link(rel="apple-touch-icon", sizes="57x57", href="/apple-touch-icon-57x57.png")
     link(rel="apple-touch-icon", sizes="60x60", href="/apple-touch-icon-60x60.png")
@@ -20,9 +20,22 @@ html
     meta(name="msapplication-TileColor", content="#da532c")
     meta(name="theme-color", content="#ffffff")
   body
-    nav.main-nav
-     a.pull-left(href='/faq') FAQ
-     a.pull-right(href='/about') About
+    nav.navbar.navbar-default.main-nav
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(data-toggle='collapse' data-target='#nav-target')
+            span.sr-only Toggle Navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') Nutshell
+        .collapse.navbar-collapse#nav-target(aria-expanded="false" style="height: 1px;")
+          ul.nav.navbar-nav.navbar-right
+            li
+              a About
+            li.divider
+            li
+              a FAQ
 
     block content
     .footer
