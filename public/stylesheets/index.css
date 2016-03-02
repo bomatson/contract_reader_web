@@ -1,10 +1,16 @@
+.btn-lg {
+  background-color: #2c3e50;
+  color: white; }
+  .btn-lg:hover, .btn-lg:focus {
+    color: #e6e6e6; }
+
 .navbar-default {
   text-align: center; }
   .navbar-default .navbar-nav > li > a {
     color: white;
     cursor: pointer; }
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-      color: #cccccc; }
+      color: #e6e6e6; }
 
 html, body {
   font-size: 16px;
@@ -12,7 +18,8 @@ html, body {
 
 .main-nav {
   border-radius: 0;
-  padding: 1rem; }
+  padding: 1rem;
+  margin-bottom: 0; }
   .main-nav .logo {
     color: white;
     cursor: pointer; }
@@ -47,15 +54,33 @@ html, body {
   .new-submission .sentence {
     margin: 1rem 3rem 0; }
 
+.home .hero:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("/images/contract2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0;
+  width: 100%;
+  height: 25rem;
+  -webkit-filter: blur(3px) grayscale(90%) opacity(42%); }
+
 .home .hero {
-  margin: 1rem; }
+  overflow: hidden;
+  position: relative;
+  padding: 3rem; }
   .home .hero .hero-text h1 {
-    margin-top: 0; }
+    font-weight: 800;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 4rem; }
 
 @media (min-width: 767px) {
   .home .hero {
-    margin: 3rem 7rem; }
-    .home .hero .hero-text {
-      text-align: left; } }
+    padding: 8rem 7rem; }
+    .home .hero .hero-text h1 {
+      font-size: 4rem; } }
 
 /*# sourceMappingURL=index.css.map */
