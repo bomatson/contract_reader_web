@@ -30,7 +30,8 @@ html, body {
       text-decoration: none; }
 
 .footer {
-  text-align: center; }
+  text-align: center;
+  margin: 2rem; }
 
 .new-submission {
   text-align: center;
@@ -59,7 +60,7 @@ html, body {
   background-size: cover;
   background-position: 0;
   width: 100%;
-  height: 25rem;
+  height: 27rem;
   -webkit-filter: blur(3px) grayscale(90%) opacity(42%); }
 
 .home .hero {
@@ -72,13 +73,13 @@ html, body {
     margin-top: 0;
     margin-bottom: 4rem; }
 
-.home .how-it-works .heading {
+.home .sub-section .heading {
   padding: 1rem; }
 
-.home .how-it-works .point {
+.home .sub-section .point {
   padding: 1rem; }
 
-.home .how-it-works .cta {
+.home .sub-section .cta {
   padding: 1rem 0 2rem; }
 
 @media (min-width: 767px) {
