@@ -88,4 +88,10 @@ html, body {
     .home .hero .hero-text h1 {
       font-size: 4rem; } }
 
+.faq-questions {
+  margin: 4rem 0; }
+
+.faq-title {
+  margin: 3rem 0; }
+
 /*# sourceMappingURL=index.css.map */
