@@ -22,21 +22,6 @@ html
     meta(name="theme-color", content="#ffffff")
     script(src='/js/ga.js')
   body
-    .modal.fade#modal(tabindex='-1', role='dialog')
-      .modal-dialog
-        .modal-content
-          .modal-header
-            button.close(type='button', data-dismiss='modal', aria-label='Close')
-              span(aria-hidden='true') ×
-            h4.modal-title Gain Access To Nutshell
-          .modal-body
-            p Enter your email address to gain access to Nutshell when it is released
-            form
-              .input-group
-                input.form-control(type='text', placeholder='bobby@example.com')
-          .modal-footer.cta
-            button.btn.btn-lg(type='button', data-dismiss='modal', aria-label='Close') Submit
-
     nav.navbar.navbar-default.main-nav
       .container-fluid
         .navbar-header
@@ -58,4 +43,20 @@ html
     .footer
       p &copy; Instrumental Tech
       small Disclaimer: We are not legal counsel and our summarizations are not legal advice. Nutshell is designed to be used in tandem with legal assistance.
+
+    .modal.fade#modal(tabindex='-1', role='dialog')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+            h4.modal-title Gain Access To Nutshell
+          .modal-body
+            p Enter your email address to gain access to Nutshell when it is released
+            form(action='/email' method='post')
+              .input-group
+                input.form-control(type='text', placeholder='bobby@example.com')
+              .modal-footer.cta
+                button.btn.btn-lg(type='submit', data-dismiss='modal', aria-label='Close') Submit
+
     script(src='/js/bundle.js')
