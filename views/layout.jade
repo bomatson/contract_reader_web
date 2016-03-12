@@ -53,10 +53,6 @@ html
             h4.modal-title Gain Access To Nutshell
           .modal-body
             p Enter your email address to gain access to Nutshell when it is released
-            form(action='/email' method='post')
-              .input-group
-                input.form-control(type='text', placeholder='bobby@example.com')
-              .modal-footer.cta
-                button.btn.btn-lg(type='submit', data-dismiss='modal', aria-label='Close') Submit
+            #emailSubmit
 
     script(src='/js/bundle.js')
