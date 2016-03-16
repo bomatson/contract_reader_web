@@ -52508,15 +52508,15 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _emailSubmit = __webpack_require__(267);
+	var _emailForm = __webpack_require__(267);
 
-	var _emailSubmit2 = _interopRequireDefault(_emailSubmit);
+	var _emailForm2 = _interopRequireDefault(_emailForm);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var target = document.getElementById('emailSubmit');
 
-	if (!!target) _reactDom2.default.render(_react2.default.createElement(_emailSubmit2.default, null), target);
+	if (!!target) _reactDom2.default.render(_react2.default.createElement(_emailForm2.default, null), target);
 
 /***/ },
 /* 267 */
@@ -52534,9 +52534,90 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _emailSubmit = __webpack_require__(268);
+
+	var _emailSubmit2 = _interopRequireDefault(_emailSubmit);
+
+	var _emailConfirmation = __webpack_require__(269);
+
+	var _emailConfirmation2 = _interopRequireDefault(_emailConfirmation);
+
 	var _got = __webpack_require__(176);
 
 	var _got2 = _interopRequireDefault(_got);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var EmailForm = function (_React$Component) {
+	  _inherits(EmailForm, _React$Component);
+
+	  function EmailForm() {
+	    var _Object$getPrototypeO;
+
+	    var _temp, _this, _ret;
+
+	    _classCallCheck(this, EmailForm);
+
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(EmailForm)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.state = {
+	      submitted: false,
+	      message: ''
+	    }, _this.post = function (email_address) {
+	      var options = {
+	        method: 'POST',
+	        headers: { 'Content-Type': 'application/json' },
+	        json: true,
+	        body: JSON.stringify({ email_address: email_address })
+	      };
+	      (0, _got2.default)('http://instrumental.tech/users', options, null).then(function () {
+	        _this.setState({
+	          message: "Thanks! You've been added to the list",
+	          submitted: true
+	        });
+	      }).catch(console.log);
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
+	  }
+
+	  _createClass(EmailForm, [{
+	    key: 'render',
+	    value: function render() {
+	      var message = this.state.message;
+
+	      var post = this.post;
+
+	      if (!!this.state.submitted) return _react2.default.createElement(_emailConfirmation2.default, { message: message });else return _react2.default.createElement(_emailSubmit2.default, { something: 'true', submit: this.post });
+	    }
+	  }]);
+
+	  return EmailForm;
+	}(_react2.default.Component);
+
+	exports.default = EmailForm;
+
+/***/ },
+/* 268 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(16);
+
+	var _react2 = _interopRequireDefault(_react);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -52560,23 +52641,9 @@
 	      args[_key] = arguments[_key];
 	    }
 
-	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(EmailSubmit)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.post = function () {
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(EmailSubmit)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.submit = function (e) {
 	      var email_address = _this.refs.email_address.value;
-	      var body = JSON.stringify({ email_address: email_address });
-	      var options = {
-	        method: 'POST',
-	        headers: { 'Content-Type': 'application/json' },
-	        json: true,
-	        body: body
-	      };
-	      (0, _got2.default)('http://instrumental.tech/users', options, null);
-	      // .then((resp) => {
-	      //   if(resp.body)
-	      //     this.setState({contract: resp.body});
-	      // })
-	      // .catch((err) => {
-	      //   console.log(err);
-	      // });
+	      _this.props.submit(email_address);
 	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 
@@ -52603,8 +52670,7 @@
 	            'button',
 	            {
 	              className: 'btn btn-lg',
-	              'data-dismiss': 'modal',
-	              onClick: this.post,
+	              onClick: this.submit,
 	              'aria-label': 'close' },
 	            'Submit'
 	          )
@@ -52617,6 +52683,80 @@
 	}(_react2.default.Component);
 
 	exports.default = EmailSubmit;
+
+/***/ },
+/* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(16);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var EmailConfirmation = function (_React$Component) {
+	  _inherits(EmailConfirmation, _React$Component);
+
+	  function EmailConfirmation() {
+	    _classCallCheck(this, EmailConfirmation);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(EmailConfirmation).apply(this, arguments));
+	  }
+
+	  _createClass(EmailConfirmation, [{
+	    key: 'render',
+	    value: function render() {
+	      var message = this.props.message;
+
+
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'input-group text-center' },
+	          _react2.default.createElement(
+	            'p',
+	            { className: 'confirmation' },
+	            ' ',
+	            message,
+	            ' '
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'modal-footer cta' },
+	          _react2.default.createElement(
+	            'button',
+	            {
+	              className: 'btn btn-lg',
+	              'data-dismiss': 'modal',
+	              'aria-label': 'close' },
+	            'Close'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return EmailConfirmation;
+	}(_react2.default.Component);
+
+	exports.default = EmailConfirmation;
 
 /***/ }
 /******/ ]);

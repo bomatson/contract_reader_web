@@ -15,9 +15,11 @@
 .modal-body {
   padding-bottom: 0; }
   .modal-body .input-group {
+    height: 3rem;
     width: 100%; }
 
 .modal-footer {
+  border-top: none;
   text-align: center; }
 
 html, body {
@@ -85,7 +87,7 @@ html, body {
   padding: 1rem; }
 
 .home .sub-section .point {
-  padding: 1rem; }
+  padding: 1rem 3rem; }
 
 .home .sub-section .cta {
   padding: 1rem 0 2rem; }
@@ -96,6 +98,10 @@ html, body {
     .home .hero .hero-text h1 {
       font-size: 4rem; } }
 
+@media (min-width: 1250px) {
+  .home .sub-section .point {
+    padding: 1rem 5rem; } }
+
 .faq-questions {
   margin: 4rem 0; }
 
@@ -105,4 +111,5 @@ html, body {
 .about-text {
   margin: 3rem 0; }
 
-/*# sourceMappingURL=index.css.map */
+.confirmation {
+  margin-top: 0.6rem; }

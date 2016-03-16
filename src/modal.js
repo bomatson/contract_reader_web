@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import EmailSubmit from './components/emailSubmit.jsx';
+import EmailForm from './components/form/emailForm.jsx';
 
-let target = document.getElementById('emailSubmit');
+const target = document.getElementById('emailSubmit');
 
 if (!!target)
-  ReactDOM.render(<EmailSubmit />, target);
+  ReactDOM.render(<EmailForm />, target);
