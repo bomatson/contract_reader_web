@@ -5,7 +5,7 @@ block content
     .row.text-center.hero
       .col-xs-12.hero-text
         h1 Summarize a contract in seconds
-        button.btn.btn-lg(type='button' data-toggle='modal' data-target='#modal') Try it free
+        button.btn.btn-lg(type='button' onclick= "window.analytics.track('Try it free')" data-toggle='modal' data-target='#modal') Try it free
     .row.text-center.sub-section
       .col-xs-12.heading
         h2 How It Works
@@ -26,7 +26,7 @@ block content
             |  a bulleted summary of the contract within minutes
       .col-xs-12.cta
         a(href='/faq')
-          button.btn.btn-lg(type='button') Learn more
+          button.btn.btn-lg(type='button' onclick= "window.analytics.track('Learn More')") Learn more
     .row.text-center.sub-section
       .col-xs-12.heading
         h2 Benefits
@@ -43,7 +43,7 @@ block content
         h4 Lessen Expenses
         p Lessen legal expenses by asking your lawyer only pertinent questions
       .col-xs-12.cta
-        button.btn.btn-lg(type='button' data-toggle='modal' data-target='#modal') Know what you sign
+        button.btn.btn-lg(type='button' onclick= "window.analytics.track('Know What You Sign')" data-toggle='modal' data-target='#modal') Know what you sign
     .row.text-center.sub-section
       .col-xs-12.heading
         h2 Pricing
@@ -51,4 +51,4 @@ block content
         p Free for beta users!
         p Provide your email for access
       .col-xs-12.cta
-        button.btn.btn-lg(type='button' data-toggle='modal' data-target='#modal') Sign up now
+        button.btn.btn-lg(type='button' onclick= "window.analytics.track('Sign Up Now')" data-toggle='modal' data-target='#modal') Sign up now
