@@ -52580,10 +52580,10 @@
 	      };
 	      (0, _got2.default)('http://instrumental.tech/users', options, null).then(function () {
 	        _this.setState({
-	          message: "Thanks! You've been added to the list",
+	          message: 'Thanks! You\'ve been added to the list',
 	          submitted: true
 	        });
-	      }).catch(console.log);
+	      });
 	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 
@@ -52592,9 +52592,8 @@
 	    value: function render() {
 	      var message = this.state.message;
 
-	      var post = this.post;
 
-	      if (!!this.state.submitted) return _react2.default.createElement(_emailConfirmation2.default, { message: message });else return _react2.default.createElement(_emailSubmit2.default, { something: 'true', submit: this.post });
+	      if (!!this.state.submitted) return _react2.default.createElement(_emailConfirmation2.default, { message: message });else return _react2.default.createElement(_emailSubmit2.default, { submit: this.post });
 	    }
 	  }]);
 
@@ -52643,8 +52642,11 @@
 
 	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(EmailSubmit)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.submit = function () {
 	      var email_address = _this.refs.email_address.value;
-	      window.analytics.track('EmailSubmit');
-	      _this.props.submit(email_address);
+
+	      if (email_address) {
+	        window.analytics.track('EmailSubmit');
+	        _this.props.submit(email_address);
+	      }
 	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 

@@ -19,23 +19,20 @@ class EmailForm extends React.Component {
     got('http://instrumental.tech/users', options, null)
       .then(() => {
         this.setState({
-          message: "Thanks! You've been added to the list",
+          message: 'Thanks! You\'ve been added to the list',
           submitted: true
         });
       })
-      .catch(console.log);
   }
 
   render() {
     const { message } = this.state;
-    const post = this.post;
 
     if(!!this.state.submitted)
       return <EmailConfirmation message={message}/>
     else
-      return <EmailSubmit something='true' submit={this.post}/>
+      return <EmailSubmit submit={this.post}/>
   }
 }
 
 export default EmailForm
-

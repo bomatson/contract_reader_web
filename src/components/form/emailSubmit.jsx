@@ -3,8 +3,11 @@ import React from 'react';
 class EmailSubmit extends React.Component {
   submit = () => {
     const email_address = this.refs.email_address.value;
-    window.analytics.track('EmailSubmit')
-    this.props.submit(email_address)
+
+    if(email_address) {
+      window.analytics.track('EmailSubmit')
+      this.props.submit(email_address)
+    }
   }
 
   render() {
