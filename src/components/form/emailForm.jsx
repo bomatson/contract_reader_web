@@ -16,7 +16,7 @@ class EmailForm extends React.Component {
       json: true,
       body: JSON.stringify({email_address})
     };
-    got('http://instrumental.tech/users', options, null)
+    got('https://contract-reader.herokuapp.com/users', options, null)
       .then(() => {
         this.setState({
           message: 'Thanks! You\'ve been added to the list',

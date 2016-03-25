@@ -52578,7 +52578,7 @@
 	        json: true,
 	        body: JSON.stringify({ email_address: email_address })
 	      };
-	      (0, _got2.default)('http://instrumental.tech/users', options, null).then(function () {
+	      (0, _got2.default)('https://contract-reader.herokuapp.com/users', options, null).then(function () {
 	        _this.setState({
 	          message: 'Thanks! You\'ve been added to the list',
 	          submitted: true
@@ -52644,6 +52644,7 @@
 	      var email_address = _this.refs.email_address.value;
 
 	      if (email_address) {
+	        window.goog_report_conversion();
 	        window.analytics.track('EmailSubmit');
 	        _this.props.submit(email_address);
 	      }

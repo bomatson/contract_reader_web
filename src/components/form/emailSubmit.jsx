@@ -5,6 +5,7 @@ class EmailSubmit extends React.Component {
     const email_address = this.refs.email_address.value;
 
     if(email_address) {
+      window.goog_report_conversion()
       window.analytics.track('EmailSubmit')
       this.props.submit(email_address)
     }
